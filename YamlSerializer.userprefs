@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="YamlSerializer/YamlSerializer.csproj">
+  <DisabledProjects>
+    <String>YamlSerializerTest/YamlSerializerTest.csproj</String>
+    <String>YamlSerializerTestRunner/YamlSerializerTestRunner.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

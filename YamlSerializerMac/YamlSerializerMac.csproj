@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A7F4A38-8E05-4372-8139-E68E4FE9E2D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>YamlSerializer</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>YamlSerializer.Mac</AssemblyName>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <UseRefCounting>false</UseRefCounting>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <CreatePackage>false</CreatePackage>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <EnablePackageSigning>false</EnablePackageSigning>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <UseRefCounting>false</UseRefCounting>
+    <UseSGen>false</UseSGen>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <CreatePackage>false</CreatePackage>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <EnablePackageSigning>false</EnablePackageSigning>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\YamlSerializer\EasyTypeConverter.cs">
+      <Link>EasyTypeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\ObjectMemberAccessor.cs">
+      <Link>ObjectMemberAccessor.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\Parser.cs">
+      <Link>Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\RehashableDictionary.cs">
+      <Link>RehashableDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\TypeUtils.cs">
+      <Link>TypeUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\UriEncoding.cs">
+      <Link>UriEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlAnchorDictionary.cs">
+      <Link>YamlAnchorDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlConstructor.cs">
+      <Link>YamlConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlDoubleQuoteEscaping.cs">
+      <Link>YamlDoubleQuoteEscaping.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlNode.cs">
+      <Link>YamlNode.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlParser.cs">
+      <Link>YamlParser.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlPresenter.cs">
+      <Link>YamlPresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlRepresenter.cs">
+      <Link>YamlRepresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlSerializer.cs">
+      <Link>YamlSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlTagPrefixes.cs">
+      <Link>YamlTagPrefixes.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlTagResolutionScheme.cs">
+      <Link>YamlTagResolutionScheme.cs</Link>
+    </Compile>
+    <Compile Include="..\YamlSerializer\YamlTagValidator.cs">
+      <Link>YamlTagValidator.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+  <ItemGroup>
+    <None Include="..\YamlSerializer\ChangeLog.txt">
+      <Link>ChangeLog.txt</Link>
+    </None>
+    <None Include="..\YamlSerializer\Readme.txt">
+      <Link>Readme.txt</Link>
+    </None>
+    <None Include="..\YamlSerializer\YamlSerializer-Debug.shfbproj">
+      <Link>YamlSerializer-Debug.shfbproj</Link>
+    </None>
+    <None Include="..\YamlSerializer\YamlSerializer-Release.shfbproj">
+      <Link>YamlSerializer-Release.shfbproj</Link>
+    </None>
+  </ItemGroup>
+</Project>
