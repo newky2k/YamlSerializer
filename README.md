@@ -1,5 +1,6 @@
 # YamlSerializer
 
+This is a fork of the project [YamlSerializer](https://yamlserializer.codeplex.com/) on codeplex made by Osamu TAKEUCHI
 
 Following is the original readme of YamlSerializer:
 ___
