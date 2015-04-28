@@ -20,6 +20,11 @@ namespace System.Yaml
     /// </summary>
     public class YamlConfig
     {
+		/// <summary>
+		/// Exclude the yaml version '%YAML 1.2' line
+		/// </summary>
+		public bool ExcludeYamlVersion = false;
+
         /// <summary>
         /// If true, all line breaks in the node value are normalized into "\r\n" 
         /// (= <see cref="LineBreakForOutput"/>) when serialize and line breaks 

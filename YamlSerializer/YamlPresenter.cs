@@ -56,8 +56,12 @@ namespace System.Yaml
 
             column = 1;
             raw = 1;
-            WriteLine("%YAML 1.2");
-            WriteLine("---");
+			if (!this.config.ExcludeYamlVersion)
+			{
+				WriteLine("%YAML 1.2");
+				WriteLine("---");
+			}
+
             NodeToYaml(node, "", Context.Normal);
             WriteLine("...");
         }
