@@ -1,21 +1,26 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
-  <PropertyGroup>
-    <TargetFrameworks>net461;netstandard2.1;</TargetFrameworks>
-    <RootNamespace>YamlSerializer</RootNamespace>
-    <AssemblyName>YamlSerializer</AssemblyName>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/newky2k/YamlSerializer</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/newky2k/YamlSerializer</RepositoryUrl>
-    <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Migrated to .net standard 2.1</PackageReleaseNotes>
-    <PackageId>YamlSerializerNet</PackageId>
-    <Version>1.2.0</Version>
-    <Description>YamlSerializer can serialize / deserialize most of native C# objects, i.e. primitive types (bool, char, int,...), enums, built-in non-primitive types (string, decimal), structures, classes and arrays of these types.</Description>
-    <PackageTags>yaml</PackageTags>
-    <Authors>newky2k</Authors>
-    <Company>newky2k</Company>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net461;netstandard2.1;net6.0;net8.0;</TargetFrameworks>
+		<RootNamespace>YamlSerializer</RootNamespace>
+		<AssemblyName>YamlSerializer</AssemblyName>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/newky2k/YamlSerializer</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/newky2k/YamlSerializer</RepositoryUrl>
+		<RepositoryType>Github</RepositoryType>
+		<PackageReleaseNotes>Migrated to .net standard 2.1</PackageReleaseNotes>
+		<PackageId>YamlSerializerNet</PackageId>
+		<Version>1.2.0</Version>
+		<Description>YamlSerializer can serialize / deserialize most of native C# objects, i.e. primitive types (bool, char, int,...), enums, built-in non-primitive types (string, decimal), structures, classes and arrays of these types.</Description>
+		<PackageTags>yaml</PackageTags>
+		<Authors>newky2k</Authors>
+		<Company>newky2k</Company>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>
