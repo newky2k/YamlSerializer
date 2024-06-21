@@ -20,6 +20,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<InternalsVisibleTo Include="YamlSerializerTestNew" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Include="../README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 

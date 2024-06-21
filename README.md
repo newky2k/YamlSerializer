@@ -4,6 +4,7 @@ This is a fork of the project [YamlSerializer](https://yamlserializer.codeplex.c
 
 This fork is to add support for Xamarin.Mac Unified libraries and to provide a nuget with the original and mac libraries.
 
+
 Following is the original readme of YamlSerializer:
 ___
 
