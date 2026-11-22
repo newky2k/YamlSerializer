@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net461;netstandard2.1;net6.0;net8.0;net9.0;</TargetFrameworks>
+		<TargetFrameworks>net461;netstandard2.1;net6.0;net8.0;net9.0;net10.0;net11.0</TargetFrameworks>
 		<RootNamespace>YamlSerializer</RootNamespace>
 		<AssemblyName>YamlSerializer</AssemblyName>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -8,16 +8,32 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/newky2k/YamlSerializer</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/newky2k/YamlSerializer</RepositoryUrl>
-		<RepositoryType>Github</RepositoryType>
-		<PackageReleaseNotes>Migrated to .net standard 2.1</PackageReleaseNotes>
+		<RepositoryType>git</RepositoryType>
+		<PackageReleaseNotes>Added support for .NET 10.0 and .NET 11.0</PackageReleaseNotes>
 		<PackageId>YamlSerializerNet</PackageId>
-		<Version>1.2.0</Version>
 		<Description>YamlSerializer can serialize / deserialize most of native C# objects, i.e. primitive types (bool, char, int,...), enums, built-in non-primitive types (string, decimal), structures, classes and arrays of these types.</Description>
 		<PackageTags>yaml</PackageTags>
 		<Authors>newky2k</Authors>
 		<Company>newky2k</Company>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>DSIcon.png</PackageIcon>
+		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
 	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+		<!-- sourcelink: publish the repository URL, embed untracked sources, keep the PDB in the package -->
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TF_BUILD)' == 'true' OR '$(GITHUB_ACTIONS)' == 'true' ">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" '$(Configuration)'=='Release' ">
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="11.0.100" PrivateAssets="All" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<InternalsVisibleTo Include="YamlSerializerTestNew" />
@@ -25,6 +41,7 @@
 
 	<ItemGroup>
 		<None Include="../README.md" Pack="true" PackagePath="\" />
+		<None Include="../DSIcon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>
