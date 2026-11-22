@@ -2,7 +2,7 @@
 
 This is a fork of the project [YamlSerializer](https://yamlserializer.codeplex.com/) on codeplex made by Osamu TAKEUCHI
 
-This fork is to add support for Xamarin.Mac Unified libraries and to provide a nuget with the original and mac libraries.
+This fork provides a NuGet package (`YamlSerializerNet`) targeting .NET Framework 4.6.1, .NET Standard 2.1 and .NET 6, 8, 9, 10 and 11.
 
 
 Following is the original readme of YamlSerializer:
